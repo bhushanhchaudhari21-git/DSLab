@@ -1,25 +1,26 @@
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main()
 {
     int queue[5];
-    int front = 0, rear = -1;
+    int front = 0;
+    int rear = 0;
 
-    cout << "Enter 5 customer order numbers:\n";
+    cout << "\nEnter 5 customer order numbers:\n";
 
-    for (int i = 0; i < 5; i++)
+    for(int i = 0; i < 5; i++)
     {
-        cin >> queue[++rear];
+        cin >> queue[rear];
+        rear++;
     }
 
-    cout << "\nProcessing Orders:\n";
+    cout << "\n=== PROCESSING ORDERS ===\n";
 
-    while (front <= rear)
+    while(front < rear)
     {
-        cout << "Processing Order: "
-             << queue[front] << endl;
+        cout << "Processing Order: " << queue[front] << endl;
         front++;
     }
 
